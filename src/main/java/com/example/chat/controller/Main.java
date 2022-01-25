@@ -2,6 +2,8 @@ package com.example.chat.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.example.chat.model.user;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Main {
 
     @RequestMapping("/")
-    public String index(HttpServletRequest request, Model model) {
+    public String index(HttpServletRequest request, Model model, user dataUser) {
+        // String username = dataUser.getUser();
+        // String username = loginData.getId().getFull_name();
         String username = (String) request.getSession().getAttribute("username");
 
         if (username == null || username.isEmpty()) {
