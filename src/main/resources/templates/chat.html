@@ -27,14 +27,14 @@
 
 </head>
 
-<body>
+<body style="background-image: url(../images/halodosbackground.png);" >
     <div id="chat-container">
         <div class="chat-header">
             <div class="user-container">
                 <span id="username" th:utext="${username}"></span>
                 <a th:href="@{/logout}">Logout</a>
             </div>
-            <h3>HaloDos WebSocket Chat Demo</h3>
+            <h3>HaloDos</h3>
         </div>
 
         <hr />
@@ -74,14 +74,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="staticBackdropLabel">Session has ended.</h5>
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
                 <div class="modal-body">
-                    <p> ini harusnya gabisa ngetik dan klik diluar modal</p>
+                    Your session has ended. Press 'Understood' to review.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                     <button type="button" class="btn btn-primary">Understood</button>
                 </div>
             </div>
